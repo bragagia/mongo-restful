@@ -1,42 +1,47 @@
 {
-	"name": "mongo-restful",
-	"version": "1.0.0",
-	"description": "Easy generation of Express routes for a REST MongoDB API",
-	"main": "index.js",
-	"bin": {
-		"inline-source": "./index.js"
-	},
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/bragagia/mongo-restful.git"
-	},
-	"keywords": [
-		"mongo",
-		"mongoose",
-		"rest",
-		"express",
-		"api",
-		"easy",
-		"mongodb",
-		"restful"
-	],
-	"author": "Mathias Bragagia <mathias.bragagia@epitech.eu",
-	"license": "GPL-3.0",
-	"bugs": {
-		"url": "https://github.com/bragagia/mongo-restful/issues"
-	},
-	"homepage": "https://github.com/bragagia/mongo-restful#readme",
-	"dependencies": {
-		"express": "^4.15.2"
-	},
-	"devDependencies": {
-		"babel-cli": "^6.24.0",
-		"babel-eslint": "^7.1.1",
-		"babel-plugin-add-module-exports": "^0.2.1",
-		"babel-preset-es2015": "^6.24.0",
-		"eslint": "^3.18.0"
-	}
+  "name": "yarma",
+  "version": "1.0.1",
+  "description": "Yet Another RESTful Mongoose API - Easy generation of Express routes for a REST MongoDB API",
+  "main": "dist/index.js",
+  "bin": {
+    "inline-source": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "babel src -d dist -s",
+    "prebuild": "mkdirp dist",
+    "test": "eslint src",
+    "prepublish": "npm run build",
+    "release": "npm run build && git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bragagia/yarm.git"
+  },
+  "keywords": [
+    "mongo",
+    "mongoose",
+    "rest",
+    "express",
+    "api",
+    "easy",
+    "mongodb",
+    "restful"
+  ],
+  "author": "Mathias Bragagia <mathias.bragagia@epitech.eu",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/bragagia/yarma/issues"
+  },
+  "homepage": "https://github.com/bragagia/yarma#readme",
+  "dependencies": {
+    "express": "^4.15.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.0",
+    "babel-eslint": "^7.1.1",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-preset-es2015": "^6.24.0",
+    "eslint": "^3.18.0",
+    "mkdirp": "^0.5.1"
+  }
 }
