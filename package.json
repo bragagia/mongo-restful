@@ -1,6 +1,6 @@
 {
   "name": "yarma",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Yet Another RESTful Mongoose API - Easy generation of Express routes for a REST MongoDB API",
   "main": "dist/index.js",
   "bin": {
